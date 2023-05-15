@@ -53,8 +53,8 @@ export default function App() {
         <>
             <MainNavbar></MainNavbar>
 
-            <Container>
-                <Card className="shadow bg-dark-subtle border-0 p-3 mt-3">
+            <Container className="my-3">
+                <Card className="shadow bg-dark-subtle border-0 p-3">
                     <h2 className="text-center mb-4">React Todo List</h2>
 
                     <TodoForm onSubmit={addTodo}></TodoForm>
