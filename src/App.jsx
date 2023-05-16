@@ -8,10 +8,15 @@ import { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import { Card } from "react-bootstrap";
 
+// React Router
+import { Routes, Route } from "react-router-dom";
+
 // Custom JSX
-import { TodoForm } from "./TodoForm";
-import { MainNavbar } from "./MainNavbar";
-import { TodoList } from "./TodoList";
+import { TodoForm } from "./components/TodoForm";
+import { MainNavbar } from "./components/MainNavbar";
+import { TodoList } from "./components/TodoList";
+import { TodosPage } from "./TodosPage";
+import { AboutPage } from "./AboutPage";
 
 export default function App() {
     const [todos, setTodos] = useState(() => {
@@ -52,22 +57,20 @@ export default function App() {
     return (
         <>
             <MainNavbar></MainNavbar>
-
-            <Container className="my-3">
-                <Card className="shadow bg-dark-subtle border-0 p-3">
-                    <h2 className="text-center mb-4">React Todo List</h2>
-
-                    <TodoForm onSubmit={addTodo}></TodoForm>
-
-                    <hr className="my-4" />
-
-                    <TodoList
-                        todos={todos}
-                        toggleTodo={toggleTodo}
-                        deleteTodo={deleteTodo}
-                    ></TodoList>
-                </Card>
-            </Container>
+            <Routes>
+                <Route
+                    path="/react-todo-list/"
+                    element={
+                        <TodosPage
+                            todos={todos}
+                            addTodo={addTodo}
+                            toggleTodo={toggleTodo}
+                            deleteTodo={deleteTodo}
+                        />
+                    }
+                />
+                <Route path="/react-todo-list/about/" element={<AboutPage />} />
+            </Routes>
         </>
     );
 }
