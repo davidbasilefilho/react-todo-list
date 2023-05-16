@@ -17,6 +17,7 @@ import { MainNavbar } from "./components/MainNavbar";
 import { TodoList } from "./components/TodoList";
 import { TodosPage } from "./TodosPage";
 import { AboutPage } from "./AboutPage";
+import { NotFound } from "./NotFound";
 
 export default function App() {
     const [todos, setTodos] = useState(() => {
@@ -70,6 +71,7 @@ export default function App() {
                     }
                 />
                 <Route path="/react-todo-list/about/" element={<AboutPage />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </>
     );
