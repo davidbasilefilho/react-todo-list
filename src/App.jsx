@@ -58,21 +58,25 @@ export default function App() {
     return (
         <>
             <MainNavbar></MainNavbar>
-            <Routes>
-                <Route
-                    path="/react-todo-list/"
-                    element={
-                        <TodosPage
-                            todos={todos}
-                            addTodo={addTodo}
-                            toggleTodo={toggleTodo}
-                            deleteTodo={deleteTodo}
+            <Container className="my-3">
+                <Card className="shadow bg-dark-subtle border-0 p-4">
+                    <Routes>
+                        <Route
+                            path="/react-todo-list/"
+                            element={
+                                <TodosPage
+                                    todos={todos}
+                                    addTodo={addTodo}
+                                    toggleTodo={toggleTodo}
+                                    deleteTodo={deleteTodo}
+                                />
+                            }
                         />
-                    }
-                />
-                <Route path="/react-todo-list/about/" element={<AboutPage />} />
-                <Route path="*" element={<NotFound />} />
-            </Routes>
+                        <Route path="/react-todo-list/about/" element={<AboutPage />} />
+                        <Route path="*" element={<NotFound />} />
+                    </Routes>
+                </Card>
+            </Container>
         </>
     );
 }
