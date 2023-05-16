@@ -22,7 +22,7 @@ export function TodoForm({ onSubmit }) {
         <>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="px-3" controlId="exampleForm.ControlInput1">
-                    <Form.Label>New Item</Form.Label>
+                    <Form.Label>New todo title</Form.Label>
                     <Form.Control
                         value={newItem}
                         onChange={(e) => setNewItem(e.target.value)}
