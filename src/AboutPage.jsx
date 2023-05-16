@@ -12,7 +12,7 @@ export function AboutPage() {
                 <Col md={10} xs={8} className="text-justify">
                     Stuff
                 </Col>
-                <Col md={2} xs={4} style={{ border: "2px solid black" }}>
+                <Col md={2} xs={4}>
                     <img
                         src={selfie}
                         alt="A photo of me"
