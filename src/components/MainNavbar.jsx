@@ -13,9 +13,9 @@ export function MainNavbar() {
     return (
         <Navbar bg="dark-subtle" expand="lg">
             <Container>
-                <Navbar.Brand href="?p=home">
+                <Navbar.Brand>
                     <Link
-                        to="/react-todo-list"
+                        to="/"
                         className="py-3"
                         style={{ textDecoration: "none", color: "inherit" }}
                     >
@@ -27,7 +27,7 @@ export function MainNavbar() {
                     <Nav className="me-auto">
                         <Nav.Link>
                             <Link
-                                to="/react-todo-list"
+                                to="/"
                                 className="py-3"
                                 style={{ textDecoration: "none", color: "inherit" }}
                             >
@@ -43,7 +43,7 @@ export function MainNavbar() {
 
                         <Nav.Link>
                             <Link
-                                to="/react-todo-list/about"
+                                to="/about"
                                 className="py-3"
                                 style={{ textDecoration: "none", color: "inherit" }}
                             >
