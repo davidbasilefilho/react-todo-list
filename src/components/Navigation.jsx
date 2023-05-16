@@ -1,4 +1,5 @@
 // React Bootstrap
+import { useState } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 
 // React Bootstrap Icons
@@ -23,8 +24,8 @@ export function Navigation() {
                 </Navbar.Brand>
                 <Navbar.Toggle className="border-0" aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link>
+                    <Nav defaultActiveKey="home" className="me-auto">
+                        <Nav.Link eventKey="home">
                             <Link
                                 to="/"
                                 className="py-3"
@@ -35,7 +36,7 @@ export function Navigation() {
                             </Link>
                         </Nav.Link>
 
-                        <Nav.Link>
+                        <Nav.Link eventKey="about">
                             <Link
                                 to="/about"
                                 className="py-3"
