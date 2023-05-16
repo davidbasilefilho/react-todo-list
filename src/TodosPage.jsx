@@ -7,7 +7,9 @@ export function TodosPage({ todos, addTodo, toggleTodo, deleteTodo }) {
         <>
             <Container className="my-3">
                 <Card className="shadow bg-dark-subtle border-0 p-4">
-                    <h2 className="text-center mb-4">React Todo List</h2>
+                    <h2 className="text-center">React Todo List</h2>
+
+                    <hr />
 
                     <TodoForm onSubmit={addTodo}></TodoForm>
 

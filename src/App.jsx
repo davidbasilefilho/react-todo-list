@@ -1,23 +1,17 @@
-// Bootstrap CSS
-import "bootstrap/dist/css/bootstrap.min.css";
-
 // React
 import { useState, useEffect } from "react";
 
-// React Bootstrap
-import { Container } from "react-bootstrap";
-import { Card } from "react-bootstrap";
-
 // React Router
-import { Routes, Route, redirect } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // Custom JSX
-import { TodoForm } from "./components/TodoForm";
-import { MainNavbar } from "./components/MainNavbar";
-import { TodoList } from "./components/TodoList";
+// -> Pages
 import { TodosPage } from "./TodosPage";
 import { AboutPage } from "./AboutPage";
 import { NotFound } from "./NotFound";
+
+// -> Components
+import { Navigation } from "./components/Navigation";
 
 export default function App() {
     const [todos, setTodos] = useState(() => {
@@ -57,7 +51,8 @@ export default function App() {
 
     return (
         <>
-            <MainNavbar></MainNavbar>
+            <Navigation />
+
             <Routes>
                 <Route
                     path="/"

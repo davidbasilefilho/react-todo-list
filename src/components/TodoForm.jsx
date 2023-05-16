@@ -30,7 +30,7 @@ export function TodoForm({ onSubmit }) {
                         className="border-0 w-100"
                     />
                 </Form.Group>
-                <Container fluid className="d-grid gap-2 px-3 mt-4">
+                <Container fluid className="d-grid gap-2 px-3 mt-3">
                     <Button variant="primary" size="md" type="submit">
                         Add Item
                     </Button>

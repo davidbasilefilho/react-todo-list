@@ -6,7 +6,7 @@ export function AboutPage() {
         <>
             <Container className="my-3">
                 <Card className="shadow bg-dark-subtle border-0 p-4">
-                    <h3 className="text-center">About Me</h3>
+                    <h2 className="text-center">About Me</h2>
 
                     <hr />
 

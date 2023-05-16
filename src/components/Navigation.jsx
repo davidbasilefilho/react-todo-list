@@ -1,15 +1,13 @@
 // React Bootstrap
-import { Navbar } from "react-bootstrap";
-import { Container } from "react-bootstrap";
-import { Nav } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 
 // React Bootstrap Icons
-import { ArrowLeftCircleFill, HouseDoorFill, InfoCircleFill } from "react-bootstrap-icons";
+import { ArrowLeftCircle, InfoCircle, CardChecklist, CheckCircle } from "react-bootstrap-icons";
 
 // React Router
 import { Link } from "react-router-dom";
 
-export function MainNavbar() {
+export function Navigation() {
     return (
         <Navbar bg="dark-subtle" expand="lg">
             <Container>
@@ -19,6 +17,7 @@ export function MainNavbar() {
                         className="py-3"
                         style={{ textDecoration: "none", color: "inherit" }}
                     >
+                        <CheckCircle className="me-2" />
                         React Todo List
                     </Link>
                 </Navbar.Brand>
@@ -31,14 +30,9 @@ export function MainNavbar() {
                                 className="py-3"
                                 style={{ textDecoration: "none", color: "inherit" }}
                             >
-                                <HouseDoorFill className="me-2" />
-                                Home
+                                <CardChecklist className=" me-2" />
+                                Todos
                             </Link>
-                        </Nav.Link>
-
-                        <Nav.Link href="https://davidbasilefilho.github.io/">
-                            <ArrowLeftCircleFill className="me-2" />
-                            Go back
                         </Nav.Link>
 
                         <Nav.Link>
@@ -47,9 +41,14 @@ export function MainNavbar() {
                                 className="py-3"
                                 style={{ textDecoration: "none", color: "inherit" }}
                             >
-                                <InfoCircleFill className="me-2" />
+                                <InfoCircle className="me-2" />
                                 About
                             </Link>
+                        </Nav.Link>
+
+                        <Nav.Link className="ms-auto" href="https://davidbasilefilho.github.io/">
+                            <ArrowLeftCircle className="me-2" />
+                            Go back
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
