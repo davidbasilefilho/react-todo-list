@@ -31,7 +31,7 @@ export function Navigation() {
                                 className="py-3"
                                 style={{ textDecoration: "none", color: "inherit" }}
                             >
-                                <CardChecklist className=" me-2" />
+                                <CardChecklist className="me-2" />
                                 Todos
                             </Link>
                         </Nav.Link>

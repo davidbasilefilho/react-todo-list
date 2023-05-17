@@ -15,14 +15,14 @@ import { Navigation } from "./components/Navigation";
 
 export default function App() {
     const [todos, setTodos] = useState(() => {
-        const localValue = localStorage.getItem("ITEMS");
+        const localValue = localStorage.getItem("items");
         if (!localValue) return [];
 
         return JSON.parse(localValue);
     });
 
     useEffect(() => {
-        localStorage.setItem("ITEMS", JSON.stringify(todos));
+        localStorage.setItem("items", JSON.stringify(todos));
     }, [todos]);
 
     function addTodo(title) {
