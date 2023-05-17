@@ -13,7 +13,7 @@ export function AboutPage() {
                     <p className="float-start">
                         <img
                             src={photoOfMe}
-                            className="float-end img-fluid col-6 col-md-2 ms-3 mb-2 rounded-4"
+                            className="float-end img-fluid col-6 col-md-2 ms-3 mb-1 rounded-4"
                             alt="A photo of me"
                         />
                         My name is David Basile Filho, a brazilian High School student. I have known
@@ -26,9 +26,7 @@ export function AboutPage() {
                     </p>
                 </Container>
 
-                <Button className="mt-3" href="https://davidbasilefilho.github.io/">
-                    Go back to my website
-                </Button>
+                <Button href="https://davidbasilefilho.github.io/">Go back to my website</Button>
             </Card>
         </>
     );
