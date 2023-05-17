@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 export function Navigation() {
     return (
         <Navbar bg="dark-subtle" expand="lg">
-            <Container>
+            <Container className="w-100">
                 <Navbar.Brand>
                     <Link
                         to="/"
@@ -24,7 +24,7 @@ export function Navigation() {
                 </Navbar.Brand>
                 <Navbar.Toggle className="border-0" aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav defaultActiveKey="home" className="me-auto">
+                    <Nav defaultActiveKey="home">
                         <Nav.Link eventKey="home">
                             <Link
                                 to="/"
@@ -47,7 +47,10 @@ export function Navigation() {
                             </Link>
                         </Nav.Link>
 
-                        <Nav.Link className="ms-auto" href="https://davidbasilefilho.github.io/">
+                        <Nav.Link
+                            className="justify-content-end"
+                            href="https://davidbasilefilho.github.io/"
+                        >
                             <ArrowLeftCircle className="me-2" />
                             Go back
                         </Nav.Link>

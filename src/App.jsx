@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 // React Router
 import { Routes, Route } from "react-router-dom";
 
+// React Bootstrap
+import { Container } from "react-bootstrap";
+
 // Custom JSX
 // -> Pages
 import { TodosPage } from "./TodosPage";
@@ -53,21 +56,23 @@ export default function App() {
         <>
             <Navigation />
 
-            <Routes>
-                <Route
-                    path="/"
-                    element={
-                        <TodosPage
-                            todos={todos}
-                            addTodo={addTodo}
-                            toggleTodo={toggleTodo}
-                            deleteTodo={deleteTodo}
-                        />
-                    }
-                />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="*" element={<NotFound />} />
-            </Routes>
+            <Container className="my-3">
+                <Routes>
+                    <Route
+                        path="/"
+                        element={
+                            <TodosPage
+                                todos={todos}
+                                addTodo={addTodo}
+                                toggleTodo={toggleTodo}
+                                deleteTodo={deleteTodo}
+                            />
+                        }
+                    />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </Container>
         </>
     );
 }
