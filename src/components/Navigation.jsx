@@ -47,10 +47,7 @@ export function Navigation() {
                             </Link>
                         </Nav.Link>
 
-                        <Nav.Link
-                            className="justify-content-end"
-                            href="https://davidbasilefilho.github.io/"
-                        >
+                        <Nav.Link href="https://davidbasilefilho.github.io/">
                             <ArrowLeftCircle className="me-2" />
                             Go back
                         </Nav.Link>

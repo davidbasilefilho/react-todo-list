@@ -5,7 +5,7 @@ import { TodoForm } from "./components/TodoForm";
 export function TodosPage({ todos, addTodo, toggleTodo, deleteTodo }) {
     return (
         <>
-            <Card className="shadow bg-dark-subtle border-0 p-4">
+            <Card className="shadow bg-dark-subtle border-0 p-3">
                 <h2 className="text-center">React Todo List</h2>
 
                 <hr />
